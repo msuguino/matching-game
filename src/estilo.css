@@ -1,0 +1,84 @@
+.container-geral{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-configuracoes{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.container-configuracoes p{
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.container-configuracoes label{
+    font-size: 20px;
+}
+
+.container-configuracoes select, button{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container-board{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px 180px 180px;
+    grid-template-rows: 250px 250px 250px;
+    grid-gap: 5px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.card.red {
+    color: red;
+}
+
+.card.black {
+    color: black;
+}
+
+.card::before {
+    content: attr(data-valor);
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    left: -5px;
+}
+
+.card::after {
+    content: attr(data-valor);
+    font-size: 30px;
+    position: relative;
+    bottom: -100px;
+    right: -5px;
+    transform: rotate(180deg)
+}
+
+.card.virada {
+    color: transparent;
+    background-color: navy;
+}
+
+.card.fora {
+    color: transparent;
+    border: none;
+}
